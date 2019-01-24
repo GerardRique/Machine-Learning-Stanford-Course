@@ -94,6 +94,8 @@ for i = 1:m
     Theta2_grad = Theta2_grad + delta3 * a2';
     Theta1_grad = Theta1_grad +  delta2 * current;
 
+end
+
 
 Theta1_sum = sum(sum(Theta1 .^ 2)) - sum(Theta1 .^ 2)(1, 1);
 Theta2_sum = sum(sum(Theta2 .^ 2)) - sum(Theta2 .^ 2)(1, 1);
