@@ -109,7 +109,14 @@ J = ((1/m) * sum(cost_vector)) + regularization_parameter;
 Theta1_grad = Theta1_grad .* (1 / m);
 Theta2_grad = Theta2_grad .* (1 / m);
 
+Theta1_reg = Theta1 * (lambda / m);
+Theta1_reg(:, 1) = 0;
+Theta1_grad = Theta1_grad + Theta1_reg;
 
+
+Theta2_reg = Theta2 * (lambda / m);
+Theta2_reg(:, 1) = 0;
+Theta2_grad = Theta2_grad + Theta2_reg;
 
 
 
